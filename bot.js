@@ -634,7 +634,7 @@ if (message.content.startsWith(prefix + 's')) {
 
 
 client.on('message', message => {
-	var prefix = "-";
+	var prefix = "+";
 if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'move')) {
  if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -672,7 +672,7 @@ message.react("❌")
 
 
 client.on('message', message => { 
-let prefix = '$'
+let prefix = '+'
     if (message.content.startsWith(prefix + 'emojis')) {
 
         const List = message.guild.emojis.map(e => e.toString()).join(" ");
@@ -739,7 +739,7 @@ eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(10000)})
 client.on("message", message => {    
           if(!message.channel.guild) return;
    if(message.author.bot) return;
-      if(message.content === "$savatar"){ 
+      if(message.content === "+savatar"){ 
           const embed = new Discord.RichEmbed()
   
       .setTitle(`صورة ** ${message.guild.name} **`)
@@ -1019,7 +1019,7 @@ client.on('message', msg => {
 
 
 client.on("message", message => {
-	var prefix = "$";
+	var prefix = "+";
 	var args = message.content.split(' ').slice(1); 
 	var msg = message.content.toLowerCase();
 	if( !message.guild ) return;
