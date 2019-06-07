@@ -1693,4 +1693,14 @@ $editavatar | لتغير صورة البوت
 
 
 
+       ** `)
+       .setFooter('By | x_ike ,')
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+
+
+
+
 client.login(process.env.BOT_TOKEN);
