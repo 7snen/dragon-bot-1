@@ -9,7 +9,7 @@ client.on('ready', () => {
     console.log(`on  ${client.guilds.size} Servers `);
     console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setGame(`+help`,"http://twitch.tv/y04zgamer")
+    client.user.setGame(`Welcome to Dragon Sys|+help`,"http://twitch.tv/y04zgamer")
     client.user.setStatus("dnd")
  });
  
@@ -117,7 +117,7 @@ var args = message.content.split(" ").slice(1);
 
   message.guild.member(user).ban(7, user);
 
-message.channel.send(`**✅ ${user.tag} banned from the server ! ✈ **  `)
+message.channel.send(`**✅ ${user.tag} banned from the server Bye ! ✈ **  `)
 
 }
 });
@@ -150,7 +150,7 @@ const command = args.shift().toLowerCase();
 
 client.on('message', message => {
               if(!message.channel.guild) return;
-    if(message.content.startsWith('$bc')) {
+    if(message.content.startsWith('+bc')) {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -340,7 +340,7 @@ footer: {
 
 
 client.on("message", msg => {
-    var prefix = "$";
+    var prefix = "+";
 if(msg.content.startsWith (prefix + "id")) {
 if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
@@ -366,7 +366,7 @@ msg.channel.send({embed: embed})
 
 
 client.on('message', message => {
-    if (message.content.startsWith("$av")) {
+    if (message.content.startsWith("+av")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -388,7 +388,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if(message.content == '$member') {
+    if(message.content == '+member') {
     const embed = new Discord.RichEmbed()
     .setDescription(`**Members info🔋
 :green_heart: online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
@@ -517,7 +517,7 @@ message.channel.send(`Successfully Unmuted ${mnt} :+1:`)
 
 
 client.on('message', message => {
-     if (message.content === "-support") {
+     if (message.content === "+support") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
