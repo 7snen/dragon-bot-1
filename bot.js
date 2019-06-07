@@ -23,7 +23,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "$unmute") {
+    if (command === "+unmute") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'mute-log');
@@ -291,7 +291,7 @@ client.on('messageUpdate', (message, newMessage) => {
 
 client.on('message', message => {
     if(!message.channel.guild) return;
-if (message.content.startsWith('$ping')) {
+if (message.content.startsWith('+ping')) {
 if(!message.channel.guild) return;
 var msg = `${Date.now() - message.createdTimestamp}`
 var api = `${Math.round(client.ping)}`
@@ -696,7 +696,7 @@ let prefix = '$'
 
 
 client.on('message', eyad => {
-  if (eyad.content.startsWith('$vban')) {
+  if (eyad.content.startsWith('+vban')) {
 if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("❎ | **انت لا تمتلك الخاصيه المطلوبه**");
 let men = eyad.mentions.users.first()
 let mas = eyad.author
@@ -758,7 +758,7 @@ client.on("message", message => {
 
 
 client.on('message', eyad => {
-  if (eyad.content.startsWith('$uvban')) {
+  if (eyad.content.startsWith('+uvban')) {
 if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
  let men = eyad.mentions.users.first()
  let mas = eyad.author
@@ -816,7 +816,7 @@ client.on('guildMemberAdd', member => {
                       
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter("#TheH1TS CLAN ")
+     .setFooter("# ")
         .setTimestamp()
     
       channel.sendEmbed(embed);
@@ -838,7 +838,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "$mute") {
+    if (command === "+mute") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'mute-log');
